@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com exemplo de formulários</title>
+</head>
+<body>
+    <h1>Exemplo de Cadastro</h1>
+    <form  onsubmit="return validarFormulario()" action="#" method="post">
+        <label for="nome">Nome do aluno: </label>
+        <input type="text" name="nome" id="nome" required max="100">
+        <br>
+        
+        <label for="email">Email do aluno: </label>
+        <input type="email" name="email" id="email" required>
+        <br>
+
+        <label for="dataCadastro">Data do cadastro: </label>
+        <input type="date" name="dataCadastro" id="dataCadastro" required>
+        <br>
+
+        <label for="genero">Sexo: </label>
+        <input type="radio" name="genero" id="genero" value="masculino">Masculino
+        <input type="radio" name="genero" id="genero" value="feminino">Feminino
+        <br>
+
+
+        <label for="idade">Idade do aluno: </label>
+        <input type="number" name="idade" id="idade" required min="1">
+        <br>
+
+        <label for="CEP">CEP do aluno</label>
+        <input type="text" 
+            name="CEP" 
+            id="CEP" 
+            pattern="\d{5}-\d{3}" 
+            title="O formato deve ser 00000-000">
+        <br>
+        <label for="foto">Foto atual: </label>
+        <input type="file" name="foto" id="foto" accept="image/*">
+        <br>
+
+        <textarea name="mensagem" id="mensagem" cols="70" rows="5" >Mensagem para o professor:
+        </textarea>
+        <input type="submit" value="Enviar"> 
+        <input type="reset" value="Limpar">
+        <br>
+
+        <label for="senha">Senha: </label>
+        <input type="password" name="senha" id="senha" required>
+        <br>
+
+        <label for="confirmarSenha">Confirmar Senha: </label>
+        <input type="password" name="confirmarSenha" id="confirmarSenha" required>
+        <br>
+    </form>
+    <script>
+        function validarFormulario(){
+            var senha = document.getElementById("senha").value;
+            var confirmarSenha = document.getElementById("confirmarSenha").value;
+            if(senha!=confirmarSenha){
+                alert("As senhas não conferem!")
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
