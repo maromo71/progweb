@@ -1,56 +1,89 @@
+/* Importando uma fonte mais moderna e legível, comum em portais gov */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Cinza mais limpo de fundo */
-    color: #212529;
+    background-color: #ffffff; /* Fundo branco para limpeza visual */
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
 }
+
 header {
-    background-color: #1a3a5a; /* Azul marinho profundo contrasta com branco */
-    color: #ffffff;
-    padding: 30px;
+    background-color: #ffffff;
+    color: #B31D1D;
+    padding: 20px 40px;
+    border-bottom: 4px solid #B31D1D; /* Linha de destaque característica */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
+
 h1 {
     margin: 0;
+    font-size: 1.8rem;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
 }
+
+nav {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eeeeee;
+}
+
 nav ul {
     list-style: none;
-    padding: 20px 0;
+    padding: 0 40px;
     margin: 0;
+    display: flex;
 }
+
 nav ul li {
-    display: inline-block;
-    margin-right: 2px;
-    background-color: #c0392b;
-    border-radius: 6px;
-    transition: 0.3 ease;
+    margin: 0;
+    transition: all 0.2s ease;
 }
-nav ul li:hover{
-    background-color: #a93226;
-    transform: translateY(-3px);
-}
+
 nav ul li a {
     text-decoration: none;
-    color: #ffffff;
-    padding: 10px 15px;
-    display: inline-block;
-    font-weight: bold;
+    color: #555555;
+    padding: 15px 20px;
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 3px solid transparent;
 }
-main{
-    padding: 20px;
-    line-height: 1.4;
-    margin-bottom: 60px;
 
+/* Hover seguindo a lógica de portal institucional */
+nav ul li:hover {
+    background-color: #f0f0f0;
 }
+
+nav ul li a:hover {
+    color: #B31D1D;
+    border-bottom: 3px solid #B31D1D;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    line-height: 1.6; /* Melhoria na legibilidade */
+    min-height: calc(100vh - 250px); /* Garante que o footer não flutue no meio da tela */
+}
+
 footer {
-    background-color: #1a3a5a;
+    background-color: #333333; /* Cinza grafite profundo para contraste */
     color: #ffffff;
-    padding: 15px;
+    padding: 30px 20px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
+    border-top: 5px solid #B31D1D;
+}
+
+/* Ajuste no posicionamento do footer */
+@media (min-height: 800px) {
+    footer {
+        position: relative;
+        width: 100%;
+    }
 }
