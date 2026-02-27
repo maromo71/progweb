@@ -1,0 +1,36 @@
+*{
+    /* Fontes selecionadas para o documento */
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 1.1rem;
+}
+
+.comum {
+    background-color: rgb(122, 255, 119);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    border-color: rgb(122, 255, 119);
+    box-shadow: 1px 2px 1px 2px #aba9b0;
+}
+#perigoso {
+    font-size: 1.2 rem;
+    font-weight: lighter;
+    background-color: #a21c1c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    border-color: #a21c1c;
+    box-shadow: 1px 2px 1px 2px #aba9b0;
+}
+.comum:hover, #perigoso:hover  {
+    background-color: #6e757c;
+}
+p {
+    text-align: justify;
+    letter-spacing: 0.2px;
+    line-height: 1.5rem;
+}
