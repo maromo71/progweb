@@ -1,0 +1,21 @@
+ .calc-container {
+     max-width: 300px;
+     margin: 50px auto;
+ }
+
+ .calc-btn {
+     width: 100%;
+     font-size: 1.2rem;
+     margin-bottom: 10px;
+ }
+
+ .lbl-titulo {
+    font-weight: bold;
+    padding: 0 10px 10px;
+    color: rgb(3, 3, 54);
+ }
+ #visor {
+     text-align: right;
+     font-size: 2rem;
+     background-color: #f8f9fa;
+ }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark">
+    <div class="container calc-container card p-3 shadow">
+        <div class="card-body">
+            <label class="lbl-titulo" for="lbl-titulo">Calculadora Fatec</label>
+            <input type="text" id="visor" class="form-control mb-3" disabled>
+
+            <div class="row">
+                <div class="col-3"><button class="btn btn-danger calc-btn" onclick="limpar()">C</button></div>
+                <div class="col-3"><button class="btn btn-secondary calc-btn" onclick="adicionar('/')">/</button></div>
+                <div class="col-3"><button class="btn btn-secondary calc-btn" onclick="adicionar('*')">*</button></div>
+                <div class="col-3"><button class="btn btn-secondary calc-btn" onclick="adicionar('-')">-</button></div>
+            </div>
+            <div class="row">
+                <div class="col-3"><button class="btn btn-light calc-btn" onclick="adicionar('7')">7</button></div>
+                <div class="col-3"><button class="btn btn-light calc-btn" onclick="adicionar('8')">8</button></div>
+                <div class="col-3"><button class="btn btn-light calc-btn" onclick="adicionar('9')">9</button></div>
+                <div class="col-3"><button class="btn btn-secondary calc-btn" onclick="adicionar('+')">+</button></div>
+            </div>
+            <div class="row">
+                <div class="col-3"><button class="btn btn-light calc-btn" onclick="adicionar('4')">4</button></div>
+                <div class="col-3"><button class="btn btn-light calc-btn" onclick="adicionar('5')">5</button></div>
+                <div class="col-3"><button class="btn btn-light calc-btn" onclick="adicionar('6')">6</button></div>
+                <div class="col-3 row-span-2">
+                    <button class="btn btn-primary calc-btn h-100" onclick="calcular()">=</button>
+                </div>
+            </div>
+            <div class="row mt-n2">
+                <div class="col-3"><button class="btn btn-light calc-btn" onclick="adicionar('1')">1</button></div>
+                <div class="col-3"><button class="btn btn-light calc-btn" onclick="adicionar('2')">2</button></div>
+                <div class="col-3"><button class="btn btn-light calc-btn" onclick="adicionar('3')">3</button></div>
+            </div>
+            <div class="row">
+                <div class="col-6"><button class="btn btn-light calc-btn" onclick="adicionar('0')">0</button></div>
+                <div class="col-3"><button class="btn btn-light calc-btn" onclick="adicionar('.')">.</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
